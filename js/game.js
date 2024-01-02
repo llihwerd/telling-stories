@@ -1,8 +1,6 @@
+import { player, storyData } from './story.js'
+
 let currentStoryState
-let player = {
-    name: "",
-    party: []
-};
 
 // Function to start the game
 function startGame() {
@@ -26,7 +24,7 @@ function updateUI() {
           choiceButton.textContent = choice.text
           choiceButton.addEventListener('click', () => makeChoice(choice))
           choicesContainer.appendChild(choiceButton)
-      });
+      })
 
       if (currentStoryState.isEnd) {
           playAgainButton.style.display = 'block'
@@ -54,10 +52,17 @@ function makeChoice(choice) {
     case "squirtleRoute":
       player.party.push("Squirtle")
       break
+    case "routeOneCaterpie":
+      player.party.push("Caterpie")
+      break
+    case "routeOneTreasure":
+      player.party.push("SUPER rare candy")
+      break
     default:
       break
   }
-  currentStoryState = storyData[choice.nextState];
+  currentStoryState = storyData[choice.nextState]
+  console.log(player)
   updateUI()
 }
 
