@@ -63,4 +63,4 @@ const storyData = {
       ]
   },
   // More states and choices
-};
+}
