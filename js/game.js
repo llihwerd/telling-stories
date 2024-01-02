@@ -8,7 +8,7 @@ let player = {
 function startGame() {
     player.name = document.getElementById('name').value;
     currentStoryState = getStartingState()
-    updateUI();
+    updateUI()
 }
 
 // Function to update the UI based on the current story state
@@ -18,7 +18,7 @@ function updateUI() {
   const playAgainButton = document.getElementById('play-again-button')
 
   if (currentStoryState) {
-      storyContainer.innerHTML = currentStoryState.text;
+      storyContainer.innerHTML = currentStoryState.text
       choicesContainer.innerHTML = ''
 
       currentStoryState.choices.forEach(choice => {
@@ -44,6 +44,19 @@ function updateUI() {
 
 // Function to handle player choices
 function makeChoice(choice) {
+  switch (choice.nextState) {
+    case "bulbasaurRoute":
+      player.party.push("Bulbasaur")
+      break
+    case "charmanderRoute":
+      player.party.push("Charmander")
+      break
+    case "squirtleRoute":
+      player.party.push("Squirtle")
+      break
+    default:
+      break
+  }
   currentStoryState = storyData[choice.nextState];
   updateUI()
 }
@@ -53,14 +66,14 @@ function makeChoice(choice) {
 function getStartingState() {
   // Ensure that storyData is defined and has a valid starting state
   if (typeof storyData !== 'undefined' && storyData.startState) {
-      return storyData.startState;
+      return storyData.startState
   } else {
       console.error("storyData or startState is undefined")
       // Handle the error or return a default state
       return {
           text: "Error: Unable to load the story. Please try again.",
           choices: []
-      };
+      }
   }
 }
 
