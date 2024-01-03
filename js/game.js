@@ -13,6 +13,12 @@ function startGame() {
   player.party = []
   player.name = document.getElementById('name').value
   currentStoryState = getStartingState()
+
+    // Hide the name input and start button
+    document.getElementById('label').style.display = 'none'
+    document.getElementById('name').style.display = 'none'
+    document.getElementById('start-button').style.display = 'none'
+
   updateUI()
 }
 
