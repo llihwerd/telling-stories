@@ -29,7 +29,6 @@ function updateUI() {
   const playAgainButton = document.getElementById('play-again-button')
 
   if (currentStoryState) {
-
     storyContainer.innerHTML = currentStoryState.text
     choicesContainer.innerHTML = ''
 
@@ -40,25 +39,25 @@ function updateUI() {
         choicesContainer.appendChild(choiceButton)
       })
 
-      // if (currentStoryState.isEnd) { 
-      //   playAgainButton.style.display = 'block'
-      //   playAgainButton.addEventListener('click', resetGame)
-      // } else {
-      //     playAgainButton.style.display = 'none'
-      // }
-  } else {
+      if (currentStoryState.isEnd) { 
+        playAgainButton.style.display = 'block'
+        // playAgainButton.addEventListener('click', resetGame)
+      } else {
+          playAgainButton.style.display = 'none'
+      }
+    } else {
       console.error("currentStoryState is undefined")
       currentStoryState = getStartingState()
       updateUI()
   }
 }
 
-if (currentStoryState.isEnd) { 
-  playAgainButton.style.display = 'block'
-  playAgainButton.addEventListener('click', resetGame)
-} else {
-    playAgainButton.style.display = 'none'
-}
+// if (currentStoryState.isEnd) { 
+//   playAgainButton.style.display = 'block'
+//   playAgainButton.addEventListener('click', resetGame)
+// } else {
+//     playAgainButton.style.display = 'none'
+// }
 
 // Function to handle player choices
 function makeChoice(choice) {
@@ -81,8 +80,6 @@ function makeChoice(choice) {
     default:
       break
   }
-
-
   currentStoryState = storyData[choice.nextState];
   updateUI()
 }
