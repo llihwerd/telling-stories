@@ -42,7 +42,7 @@ function updateUI() {
 
       if (currentStoryState.isEnd) { 
         playAgainButton.style.display = 'block'
-        playAgainButton.addEventListener('click', startGame)
+        playAgainButton.addEventListener('click', resetGame)
       } else {
           playAgainButton.style.display = 'none'
       }
@@ -98,7 +98,24 @@ function getStartingState() {
 }
 
 
+// Function to reset the game
+function resetGame() {
+  player.party = []
+  player.name = ''
+  currentStoryState = getStartingState()
+  
+  // Show the name input and start button
+  document.getElementById('name').style.display = 'block'
+  document.getElementById('start-button').style.display = 'block'
+  
+  // Clear the input field
+  document.getElementById('name').value = ''
+  
+  updateUI()
+}
+
+
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('start-button').addEventListener('click', startGame)
-  document.getElementById('play-again-button').addEventListener('click', startGame)
+  document.getElementById('play-again-button').addEventListener('click', resetGame)
 })
