@@ -1,0 +1,61 @@
+#play-again-button {
+  display: none;
+}
+
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  /* font-family: 'Arial', sans-serif; */
+  font-family: 'Pokemon Solid', sans-serif;
+  letter-spacing: 4px;
+  color: #f7eb06;
+  text-shadow: -1px 2px 4px #000000;
+  background-image: url(https://file.notion.so/f/f/a6799029-867e-4fd1-9571-a40b90a542a4/2455140c-fcb5-4116-b41e-d2c745458c56/grass_bkgd_transparent.png?id=aa222836-2698-4e5d-9bba-2f2b5f4c117f&table=block&spaceId=a6799029-867e-4fd1-9571-a40b90a542a4&expirationTimestamp=1704398400000&signature=8XODzMoSl_dThwi3hmPDw2tWDQ7cbN8581J7WpKIJ3w&downloadName=grass_bkgd_transparent.png)
+}
+
+#game-container {
+  max-width: 800px; /* or any width you prefer */
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center; /* Centering text */
+}
+
+button {
+  background-color: #f7eb06; /* Pokémon yellow */
+  border: none;
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 5px;
+  font-family: 'Pokemon Solid', sans-serif;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #d4ac0d; /* Darker yellow on hover */
+}
+
+#play-again-button {
+  display: none;
+}
+
+/* Styles for choices container and story container */
+
+#story-container {
+  background: rgba(255, 255, 255, 0.75);
+  border-radius: 10px;
+  border: 2px solid black;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.choice-button {
+  /* styles for choice buttons if they are not images */
+}
