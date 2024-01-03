@@ -40,12 +40,12 @@ function updateUI() {
         choicesContainer.appendChild(choiceButton)
       })
 
-      if (currentStoryState.isEnd) { 
-        playAgainButton.style.display = 'block'
-        playAgainButton.addEventListener('click', resetGame)
-      } else {
-          playAgainButton.style.display = 'none'
-      }
+      // if (currentStoryState.isEnd) { 
+      //   playAgainButton.style.display = 'block'
+      //   playAgainButton.addEventListener('click', resetGame)
+      // } else {
+      //     playAgainButton.style.display = 'none'
+      // }
   } else {
       console.error("currentStoryState is undefined")
       currentStoryState = getStartingState()
@@ -53,6 +53,12 @@ function updateUI() {
   }
 }
 
+if (currentStoryState.isEnd) { 
+  playAgainButton.style.display = 'block'
+  playAgainButton.addEventListener('click', resetGame)
+} else {
+    playAgainButton.style.display = 'none'
+}
 
 // Function to handle player choices
 function makeChoice(choice) {
@@ -107,6 +113,9 @@ function resetGame() {
   // Show the name input and start button
   document.getElementById('name').style.display = 'block'
   document.getElementById('start-button').style.display = 'block'
+  document.getElementById('start-button').style.display = 'block'
+
+  document.getElementById('play-again-button').style.display = 'none'
   
   // Clear the input field
   document.getElementById('name').value = ''
