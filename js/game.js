@@ -1,12 +1,19 @@
-import { player, storyData } from './story.js'
+import { storyData } from './story.js'
+
+let player = {
+  name: "",
+  party: []
+}
 
 let currentStoryState
 
+
 // Function to start the game
 function startGame() {
-    player.name = document.getElementById('name').value;
-    currentStoryState = getStartingState()
-    updateUI()
+  player.party = []
+  player.name = document.getElementById('name').value
+  currentStoryState = getStartingState()
+  updateUI()
 }
 
 // Function to update the UI based on the current story state
@@ -16,19 +23,20 @@ function updateUI() {
   const playAgainButton = document.getElementById('play-again-button')
 
   if (currentStoryState) {
-      storyContainer.innerHTML = currentStoryState.text
-      choicesContainer.innerHTML = ''
 
-      currentStoryState.choices.forEach(choice => {
-          const choiceButton = document.createElement('button')
-          choiceButton.textContent = choice.text
-          choiceButton.addEventListener('click', () => makeChoice(choice))
-          choicesContainer.appendChild(choiceButton)
+    storyContainer.innerHTML = currentStoryState.text
+    choicesContainer.innerHTML = ''
+
+    currentStoryState.choices.forEach(choice => {
+        const choiceButton = document.createElement('button')
+        choiceButton.textContent = choice.text
+        choiceButton.addEventListener('click', () => makeChoice(choice))
+        choicesContainer.appendChild(choiceButton)
       })
 
-      if (currentStoryState.isEnd) {
-          playAgainButton.style.display = 'block'
-          playAgainButton.addEventListener('click', startGame)
+      if (currentStoryState.isEnd) { 
+        playAgainButton.style.display = 'block'
+        playAgainButton.addEventListener('click', startGame)
       } else {
           playAgainButton.style.display = 'none'
       }
@@ -61,8 +69,9 @@ function makeChoice(choice) {
     default:
       break
   }
-  currentStoryState = storyData[choice.nextState]
-  console.log(player)
+
+
+  currentStoryState = storyData[choice.nextState];
   updateUI()
 }
 
@@ -83,5 +92,7 @@ function getStartingState() {
 }
 
 
-// Initialize the game
-document.getElementById('start-button').addEventListener('click', startGame)
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('start-button').addEventListener('click', startGame)
+  document.getElementById('play-again-button').addEventListener('click', startGame)
+})

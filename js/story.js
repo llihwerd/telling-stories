@@ -1,24 +1,20 @@
 // story.js
-export let player = {
-    name: "",
-    party: []
-}
 export let storyData = {
   startState: {
-      text: "Welcome to the world of Pokemon, Trainer! Choose your path.",
+      text: `Welcome to the world of Pokemon! Choose your path.`,
       choices: [
           {
               text: "Go to Professor Oak's lab",
               nextState: "professorLab"
           },
           {
-              text: "Explore the town",
-              nextState: "exploreTown"
+              text: "Go back to sleep. Play Again!",
+              isEnd: true
           }
       ]
   },
   professorLab: {
-      text: "You arrive at Professor Oak's lab. He gives you a choice of three Pokemon. Choose one.",
+      text: "You arrive at Professor Oak's lab. He gives you a choice of three Pokemon. Choose wisely.",
       choices: [
           {
               text: "Select Bulbasaur",
@@ -36,7 +32,7 @@ export let storyData = {
   },
   // More states and choices
   bulbasaurRoute: {
-      text: "You chose Bulbasaur! Your adventure begins with your new Pokemon.",
+      text: "You chose Bulbasaur! You've chosen wisely.",
       choices: [
         {
             text: "Head back to town with your new friend!",
@@ -62,6 +58,7 @@ export let storyData = {
         }
       ]
   },
+
   exploreTown: {
       text: "You decide to explore the town. What area would you like to visit?",
       choices: [
@@ -70,22 +67,30 @@ export let storyData = {
               nextState: "pokemonCenter"
           },
           {
-              text: "Go to the Mart",
-              nextState: "mart"
-          },
-          {
               text: "Head towards the outskirts",
               nextState: "outskirts"
           }
       ]
   },
 
-
+  pokemonCenter: {
+      text: "You see nurse Joy, who eagerly asks for your help.",
+      choices: [
+          {
+              text: "Become a PokeDoctor and dedicate the rest of your life to healing pokemon. Play Again",
+              isEnd: true
+          },
+          {
+              text: "That's too much pressure, go back outside.",
+              nextState: "exploreTown"
+          }
+      ]
+  },
 
   // More states and choices
   outskirts:  {
     text: "You decide to venture away from town. You discover a path through the woods, but it's guarded by an angry Caterpie!",
-    choices: (player.party.length === 0) ?
+    choices:
         [
             {
                 text: `Battle it!`,
@@ -94,21 +99,6 @@ export let storyData = {
             {
                 text: "Run past it!",
                 nextState: "routeOne"
-            }
-        ]
-        :
-        [
-            {
-                text: "Run back to town before it gets you!",
-                nextState: "exploreTown"
-            },
-            {
-              text: "Run back to town before it gets you!",
-              nextState: "exploreTown"
-            },
-            {
-            text: "Run back to town before it gets you!",
-            nextState: "exploreTown"
             }
         ]
 },
@@ -160,7 +150,7 @@ routeOneTreasure: {
   choices: [
       {
           text: "Pick it up, and head to the next town!",
-          nextState: "viridianCity"
+          nextState: "viridianCitySuper"
       }
     ]
 },
@@ -180,39 +170,98 @@ viridianCity: {
 },
 
 
+viridianCitySuper: {
+  text: "As soon as you take one step past the welcome sign, a mysterious woman approaches you.",
+  choices: [
+      {
+          text: "Ask what she wants.",
+          nextState: "crimsonBattleSuper"
+      },
+      {
+          text: "Walk past her.",
+          nextState: "viridianTownCenter"
+      }
+  ]
+},
 
-
-crimsonBattle:  {
+crimsonBattleSuper:  {
   text: "She looks pleased, then sends out an incredibly-strong-looking pikachu!",
-  choices: (player.party.length === 3) ?
+  choices:
       [
           {
-              text: "The SUPER rare candy in your bag starts shaking and your 2 pokemon evolve right in front you gaining SUPER strength! >>> ATTACK!",
+              text: "The SUPER rare candy in your bag starts shaking and your pokemon evolve right in front you gaining SUPER strength! >>> ATTACK!",
               nextState: "crimsonBattleWin"
-          }
-      ]
-      :
-      [
-          {
-              text: "Send out your pokemon and ATTACK!",
-              nextState: "crimsonBattleLose"
           }
       ]
 },
 
+crimsonBattle:  {
+  text: "She looks pleased, then sends out an incredibly-strong-looking pikachu!",
+  choices:
+    [
+       {
+          text: "Send out your pokemon and ATTACK!",
+          nextState: "crimsonBattleLoss"
+      }
+    ]
+},
 
-routeOneTreasure: {
-  text: "You're curiosity paid off, you found a SUPER rare candy!",
+crimsonBattleWin: {
+  text: "You've just defeated Crimson, the Pokemon League Champion! You're officially a Pokemon Master!",
   choices: [
       {
-          text: "Pick it up, and head to the next town!",
-          nextState: "viridianCity"
+          text: "You are the very best! Play again!",
+          isEnd: true
       }
     ]
 },
 
 
+crimsonBattleLoss: {
+  text: "You've just been defeated by Crimson, the Pokemon League Champion! You're definitely not a Pokemon Master!",
+  choices: [
+      {
+          text: "You are not the very best! Play again!",
+          isEnd: true
+      }
+    ]
+},
+
+viridianTownCenter: {
+  text: "A bustling downtown full of smells and sounds!",
+  choices: [
+      {
+          text: "The aroma is irrisistible! Walk into the bakery.",
+          nextState: "fullTummy"
+      },
+      {
+          text: "You've had a long day, take a seat on the bench.",
+          nextState: "relaxed"
+      }
+  ]
+},
+
+
+relaxed: {
+  text: "You watch people walk past until you doze off for a quick nap",
+  choices: [
+      {
+          text: "You take some well-earned rest! Play again!",
+          isEnd: true
+      }
+    ]
+},
+
+
+fullTummy: {
+  text: "You eat all the pastries you can, and head back home.",
+  choices: [
+      {
+          text: "The food was simply the best! Play again!",
+          isEnd: true
+      }
+    ]
 }
 
 
-console.log(player)
+}
