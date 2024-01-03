@@ -41,6 +41,7 @@ function updateUI() {
 
       if (currentStoryState.isEnd) { 
         playAgainButton.style.display = 'block'
+        playAgainButton.style.color = 'blue'
         // playAgainButton.addEventListener('click', resetGame)
       } else {
           playAgainButton.style.display = 'none'
@@ -109,7 +110,6 @@ function resetGame() {
   
   // Show the name input and start button
   document.getElementById('name').style.display = 'block'
-  document.getElementById('start-button').style.display = 'block'
   document.getElementById('start-button').style.display = 'block'
 
   document.getElementById('play-again-button').style.display = 'none'
