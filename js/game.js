@@ -30,29 +30,34 @@ function updateUI() {
   const choicesContainer = document.getElementById('choices-container')
   const playAgainButton = document.getElementById('play-again-button')
 
-  if (currentStoryState && currentStoryState.isEnd) {
-    // Display the "Play Again" button and hide the choices if it's the end of the game
+  // Check if we're at the start of the game (no current story state)
+  if (!currentStoryState) {
+    storyContainer.style.display = 'none'
+    choicesContainer.style.display = 'none'
+    return
+  }
+
+  // Always clear the choices container
+  choicesContainer.innerHTML = ''
+
+  if (currentStoryState.isEnd) {
+    // We're at an end state, so display the "Play Again" button
     playAgainButton.style.display = 'block'
-    choicesContainer.innerHTML = '' // Clear previous choices
-    storyContainer.innerHTML = currentStoryState.text // Show ending text
-  } else if (currentStoryState) {
-    // Hide the "Play Again" button and show the choices if it's not the end of the game
+    // Display the story text for the end state
+    storyContainer.innerHTML = currentStoryState.text
+  } else {
+    // We're not at an end state, so hide the "Play Again" button and show choices
     playAgainButton.style.display = 'none'
     storyContainer.innerHTML = currentStoryState.text
-    choicesContainer.innerHTML = '' // Clear previous choices
     currentStoryState.choices.forEach(choice => {
       const choiceButton = document.createElement('button')
       choiceButton.textContent = choice.text
-      choiceButton.addEventListener('click', () => makeChoice(choice))
+      choiceButton.onclick = () => makeChoice(choice)
       choicesContainer.appendChild(choiceButton)
     })
-  } else {
-    // Hide both the "Play Again" button and the story/choices containers if there's no current story
-    playAgainButton.style.display = 'none'
-    storyContainer.style.display = 'none'
-    choicesContainer.style.display = 'none'
   }
 }
+
 
 
 // Function to handle player choices
