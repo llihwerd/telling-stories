@@ -1,10 +1,3 @@
-
-
-#play-again-button {
-  display: none;
-  color: blue;
-}
-
 body {
   font-family: 'Pokemon Solid', sans-serif;
   letter-spacing: 4px;
@@ -14,11 +7,32 @@ body {
 }
 
 #game-container {
-  max-width: 800px;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
   padding: 20px;
-  text-align: center;
+  box-sizing: border-box;
 }
+
+
+#choices-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+label, input {
+  display: inline;
+  margin: 10px auto;
+}
+
+#name, #start-button {
+  display: block;
+  margin: 10px auto;
+  width: 200px;
+}
+
 
 button {
   background-color: #ffd900;
@@ -36,16 +50,21 @@ button:hover {
   background-color: #d4ac0d;
 }
 
+#play-again-button {
+  display: none; /* Initially hidden */
+  margin: 20px auto;
+}
+
+#play-again-button:hover {
+  background-color: #d4ac0d;
+}
 
 #story-container {
+  display: none;
   background: rgba(148, 214, 110, 0.85);
   border-radius: 10px;
   border: 2px solid black;
   padding: 10px;
   margin-bottom: 20px;
   margin-top: 20px;
-}
-
-.choice-button {
-  
 }
