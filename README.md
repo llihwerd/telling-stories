@@ -42,6 +42,5 @@ https://netlify.com/
 
 ## Next Steps (icebox)
 
--Intgrate story paths with dynamic options that appear/dissapear based on player party/inventory contents.
--Add visual party/inventory HUD with images of pokemon/items that persists throughout game.
--
+Integrate story paths with dynamic options that appear/dissapear based on player party/inventory contents. 
+Add visual party/inventory HUD with images of pokemon/items that persists throughout game.
