@@ -7,7 +7,6 @@ let player = {
 
 let currentStoryState
 
-
 // Function to start the game
 function startGame() {
   player.party = []
@@ -19,6 +18,9 @@ function startGame() {
     document.getElementById('name').style.display = 'none'
     document.getElementById('start-button').style.display = 'none'
 
+    document.getElementById('story-container').style.display = 'block'
+    document.getElementById('choices-container').style.display = 'block'
+
   updateUI()
 }
 
@@ -28,63 +30,59 @@ function updateUI() {
   const choicesContainer = document.getElementById('choices-container')
   const playAgainButton = document.getElementById('play-again-button')
 
-  if (currentStoryState) {
+  if (currentStoryState && currentStoryState.isEnd) {
+    // Display the "Play Again" button and hide the choices if it's the end of the game
+    playAgainButton.style.display = 'block'
+    choicesContainer.innerHTML = '' // Clear previous choices
+    storyContainer.innerHTML = currentStoryState.text // Show ending text
+  } else if (currentStoryState) {
+    // Hide the "Play Again" button and show the choices if it's not the end of the game
+    playAgainButton.style.display = 'none'
     storyContainer.innerHTML = currentStoryState.text
-    choicesContainer.innerHTML = ''
-
+    choicesContainer.innerHTML = '' // Clear previous choices
     currentStoryState.choices.forEach(choice => {
-        const choiceButton = document.createElement('button')
-        choiceButton.textContent = choice.text
-        choiceButton.addEventListener('click', () => makeChoice(choice))
-        choicesContainer.appendChild(choiceButton)
-      })
-
-      if (currentStoryState.isEnd) { 
-        playAgainButton.style.display = 'block'
-        playAgainButton.style.color = 'blue'
-        // playAgainButton.addEventListener('click', resetGame)
-      } else {
-          playAgainButton.style.display = 'none'
-      }
-    } else {
-      console.error("currentStoryState is undefined")
-      currentStoryState = getStartingState()
-      updateUI()
+      const choiceButton = document.createElement('button')
+      choiceButton.textContent = choice.text
+      choiceButton.addEventListener('click', () => makeChoice(choice))
+      choicesContainer.appendChild(choiceButton)
+    })
+  } else {
+    // Hide both the "Play Again" button and the story/choices containers if there's no current story
+    playAgainButton.style.display = 'none'
+    storyContainer.style.display = 'none'
+    choicesContainer.style.display = 'none'
   }
 }
 
-// if (currentStoryState.isEnd) { 
-//   playAgainButton.style.display = 'block'
-//   playAgainButton.addEventListener('click', resetGame)
-// } else {
-//     playAgainButton.style.display = 'none'
-// }
 
 // Function to handle player choices
 function makeChoice(choice) {
-  switch (choice.nextState) {
-    case "bulbasaurRoute":
-      player.party.push("Bulbasaur")
-      break
-    case "charmanderRoute":
-      player.party.push("Charmander")
-      break
-    case "squirtleRoute":
-      player.party.push("Squirtle")
-      break
-    case "routeOneCaterpie":
-      player.party.push("Caterpie")
-      break
-    case "routeOneTreasure":
-      player.party.push("SUPER rare candy")
-      break
-    default:
-      break
+  if (choice.nextState) {
+    switch (choice.nextState) {
+      case "bulbasaurRoute":
+        player.party.push("Bulbasaur")
+        break
+      case "charmanderRoute":
+        player.party.push("Charmander")
+        break
+      case "squirtleRoute":
+        player.party.push("Squirtle")
+        break
+      case "routeOneCaterpie":
+        player.party.push("Caterpie")
+        break
+      case "routeOneTreasure":
+        player.party.push("SUPER rare candy")
+        break
+      default:
+        break
+    }
+    currentStoryState = storyData[choice.nextState]
+    updateUI()
+  } else {
+    console.log("end state")
   }
-  currentStoryState = storyData[choice.nextState];
-  updateUI()
 }
-
 
 // Function to retrieve the starting story state
 function getStartingState() {
@@ -106,20 +104,25 @@ function getStartingState() {
 function resetGame() {
   player.party = []
   player.name = ''
-  currentStoryState = getStartingState()
+  currentStoryState = null
   
-  // Show the name input and start button
+  // Reset to initial screen
+  document.getElementById('label').style.display = 'block'
   document.getElementById('name').style.display = 'block'
   document.getElementById('start-button').style.display = 'block'
-
   document.getElementById('play-again-button').style.display = 'none'
-  
+  document.getElementById('story-container').innerHTML = ''
+  document.getElementById('choices-container').innerHTML = ''
+
+  // Ensure the story and choices containers are not displayed
+  document.getElementById('story-container').style.display = 'none'
+  document.getElementById('choices-container').style.display = 'none'
+
   // Clear the input field
   document.getElementById('name').value = ''
-  
-  updateUI()
 }
 
+console.log(getStartingState())
 
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('start-button').addEventListener('click', startGame)

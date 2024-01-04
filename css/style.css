@@ -3,15 +3,7 @@
   color: blue;
 }
 
-/* Basic reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  /* font-family: 'Arial', sans-serif; */
   font-family: 'Pokemon Solid', sans-serif;
   letter-spacing: 4px;
   color: #ffd900;
@@ -20,34 +12,28 @@ body {
 }
 
 #game-container {
-  max-width: 800px; /* or any width you prefer */
+  max-width: 800px;
   margin: 0 auto;
   padding: 20px;
-  text-align: center; /* Centering text */
+  text-align: center;
 }
 
 button {
-  background-color: #ffd900; /* Pokémon yellow */
+  background-color: #ffd900;
   border: none;
   padding: 10px 20px;
   margin: 10px;
   border-radius: 5px;
   font-family: 'Pokemon Solid', sans-serif;
   letter-spacing: 2px;
-  /* text-shadow: -1px 2px 4px rgba(148, 214, 110, 1); */
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: #d4ac0d; /* Darker yellow on hover */
+  background-color: #d4ac0d;
 }
 
-#play-again-button {
-  display: none;
-}
-
-/* Styles for choices container and story container */
 
 #story-container {
   background: rgba(148, 214, 110, 0.85);
@@ -59,5 +45,5 @@ button:hover {
 }
 
 .choice-button {
-  /* styles for choice buttons if they are not images */
+  
 }

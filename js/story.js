@@ -77,7 +77,7 @@ export let storyData = {
       text: "You see nurse Joy, who eagerly asks for your help.",
       choices: [
           {
-              text: "Become a PokeDoctor and dedicate the rest of your life to healing pokemon. Play Again",
+              text: "Become a PokeDoctor and dedicate the rest of your life to healing pokemon.",
               isEnd: true
           },
           {
@@ -210,7 +210,7 @@ crimsonBattleWin: {
   text: "You've just defeated Crimson, the Pokemon League Champion! You're officially a Pokemon Master!",
   choices: [
       {
-          text: "You are the very best! Play again!",
+        //   text: "You are the very best!",
           isEnd: true
       }
     ]
@@ -221,7 +221,7 @@ crimsonBattleLoss: {
   text: "You've just been defeated by Crimson, the Pokemon League Champion! You're definitely not a Pokemon Master!",
   choices: [
       {
-          text: "You are not the very best! Play again!",
+        //   text: "You are not the very best! Play again!",
           isEnd: true
       }
     ]
@@ -246,7 +246,7 @@ relaxed: {
   text: "You watch people walk past until you doze off for a quick nap",
   choices: [
       {
-          text: "You take some well-earned rest! Play again!",
+        //   text: "You take some well-earned rest! Play again!",
           isEnd: true
       }
     ]
@@ -257,7 +257,7 @@ fullTummy: {
   text: "You eat all the pastries you can, and head back home.",
   choices: [
       {
-          text: "The food was simply the best! Play again!",
+        //   text: "The food was simply the best! Play again!",
           isEnd: true
       }
     ]
