@@ -17,7 +17,17 @@ body {
 
 #title-container {
   display: block;
-  background: rgb(255, 33, 63);
+  background: rgb(33, 59, 255);
+  border-radius: 10px;
+  border: 2px solid black;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  background: rgb(33, 59, 255);
   border-radius: 10px;
   border: 2px solid black;
   padding: 10px;
@@ -70,8 +80,8 @@ button:hover {
 }
 
 #story-container {
-  display: block;
-  background: rgba(255, 33, 33, 1);
+  display: none;
+  background: rgb(33, 59, 255);
   border-radius: 10px;
   border: 2px solid black;
   padding: 10px;
