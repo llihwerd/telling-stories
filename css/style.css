@@ -6,6 +6,18 @@ body {
   background-image: url(https://img1.wsimg.com/isteam/ip/1da0c1d6-0276-4dec-be05-23cf138b20ca/grass_bkgd_transparent.png);
 }
 
+input {
+  display: inline;
+  background: #ffd900;
+  border-radius: 10px;
+  border: 2px solid black;
+  font-family: 'Pokemon Solid', sans-serif;
+  letter-spacing: 4px;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
 #game-container {
   display: flex;
   flex-direction: column;
@@ -26,7 +38,7 @@ body {
 }
 
 label {
-  display: block;
+  display: inline;
   background: rgb(33, 59, 255);
   border-radius: 10px;
   border: 2px solid black;

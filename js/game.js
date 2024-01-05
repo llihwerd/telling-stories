@@ -13,6 +13,10 @@ function startGame() {
   player.name = document.getElementById('name').value
   currentStoryState = getStartingState()
 
+    const playerName = player.name.trim() ? player.name : "you"
+    const h1Element = document.querySelector('h1');
+    h1Element.textContent = `Can ${playerName} be the very best?`
+
     // Hide the name input and start button
     document.getElementById('label').style.display = 'none'
     document.getElementById('name').style.display = 'none'
@@ -154,6 +158,9 @@ function resetGame() {
 
   // Hide the audio controls container
   document.getElementById('audio-controls').style.display = 'none'
+
+  // Hide end of game animation
+  document.getElementById('end-game-image').style.display = 'none'
 }
 
 document.addEventListener('DOMContentLoaded', () => {
