@@ -30,7 +30,7 @@ function startGame() {
   document.getElementById('audio-controls').style.display = 'block'
 }
 
-// Event listener for the pause button
+
 document.getElementById('audio-pause-button').addEventListener('click', function() {
   const gameAudio = document.getElementById('game-audio')
   if (gameAudio.paused) {
@@ -42,7 +42,7 @@ document.getElementById('audio-pause-button').addEventListener('click', function
   }
 })
 
-// Event listener for the volume control
+
 document.getElementById('volume-control').addEventListener('input', function() {
   const gameAudio = document.getElementById('game-audio')
   gameAudio.volume = this.value

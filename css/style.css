@@ -15,6 +15,16 @@ body {
   box-sizing: border-box;
 }
 
+#title-container {
+  display: block;
+  background: rgb(255, 33, 63);
+  border-radius: 10px;
+  border: 2px solid black;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
 
 #choices-container {
   display: flex;
@@ -60,8 +70,8 @@ button:hover {
 }
 
 #story-container {
-  display: none;
-  background: rgba(148, 214, 110, 0.85);
+  display: block;
+  background: rgba(255, 33, 33, 1);
   border-radius: 10px;
   border: 2px solid black;
   padding: 10px;
@@ -94,7 +104,7 @@ body {
 
 
 #audio-pause-button, #volume-control {
-  display: block; /* Each control will take up the full width of the container */
+  display: block;
 }
 
 
@@ -112,6 +122,6 @@ body {
   height: auto;
   margin-top: 120px;
   display: none;
-  animation: rotate 5s linear infinite; /* Adjust the duration (5s) as needed */
+  animation: rotate 5s linear infinite;
 }
 
