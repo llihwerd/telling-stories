@@ -6,8 +6,7 @@ body {
   background-image: url(https://img1.wsimg.com/isteam/ip/1da0c1d6-0276-4dec-be05-23cf138b20ca/grass_bkgd_transparent.png);
 }
 
-input {
-  display: inline;
+/* input {
   background: #ffd900;
   border-radius: 10px;
   border: 2px solid black;
@@ -16,7 +15,8 @@ input {
   padding: 10px;
   margin-bottom: 20px;
   margin-top: 20px;
-}
+  width: 700px;
+} */
 
 #game-container {
   display: flex;
@@ -54,10 +54,10 @@ label {
   flex-wrap: wrap;
 }
 
-label, input {
+/* label, input {
   display: inline;
   margin: 10px auto;
-}
+} */
 
 #name, #start-button {
   display: block;
@@ -147,3 +147,15 @@ body {
   animation: rotate 5s linear infinite;
 }
 
+
+input {
+  background: #ffd900;
+  border-radius: 10px;
+  border: 2px solid black;
+  font-family: 'Pokemon Solid', sans-serif;
+  letter-spacing: 4px;
+  padding: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  width: 700px;
+}
