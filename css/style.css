@@ -3,7 +3,7 @@ body {
   letter-spacing: 4px;
   color: #ffd900;
   text-shadow: -1px 2px 4px #000000;
-  background-image: url(https://i.imgur.com/Mjjbvdv.png);
+  background-image: url(https://img1.wsimg.com/isteam/ip/1da0c1d6-0276-4dec-be05-23cf138b20ca/grass_bkgd_transparent.png);
 }
 
 #game-container {
@@ -68,3 +68,50 @@ button:hover {
   margin-bottom: 20px;
   margin-top: 20px;
 }
+
+#audio-pause-button, #volume-control {
+  display: none; /* Hide by default */
+  margin-top: 10px;
+}
+
+
+#volume-control {
+  width: 100px;
+}
+
+
+body {
+  position: relative;
+}
+
+#audio-controls {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  display: none;
+  z-index: 1000;
+}
+
+
+#audio-pause-button, #volume-control {
+  display: block; /* Each control will take up the full width of the container */
+}
+
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#end-game-image {
+  max-width: 100%;
+  height: auto;
+  margin-top: 120px;
+  display: none;
+  animation: rotate 5s linear infinite; /* Adjust the duration (5s) as needed */
+}
+

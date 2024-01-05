@@ -24,6 +24,8 @@ Start playing here, no equipment required! >>> https://gotta-choose-em-all.netli
 
 Free use Pokemon font - https://www.cdnfonts.com/pokemon-solid.font
 Grass and Pikachu background - https://shirtigo.co/wp-content/uploads/2013/10/troubleinthetallgrass.jpg
+Ash Ketchum image - https://www.pinterest.com/pin/182395853637547939/
+Background music - https://www.youtube.com/watch?v=3etkGxGz-4g
 
 
 ## Technologies

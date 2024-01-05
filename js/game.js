@@ -22,13 +22,38 @@ function startGame() {
     document.getElementById('choices-container').style.display = 'block'
 
   updateUI()
+
+  const gameAudio = document.getElementById('game-audio')
+  gameAudio.play()
+
+  // Show the audio controls container
+  document.getElementById('audio-controls').style.display = 'block'
 }
+
+// Event listener for the pause button
+document.getElementById('audio-pause-button').addEventListener('click', function() {
+  const gameAudio = document.getElementById('game-audio')
+  if (gameAudio.paused) {
+    gameAudio.play()
+    this.textContent = 'Pause'
+  } else {
+    gameAudio.pause()
+    this.textContent = 'Play'
+  }
+})
+
+// Event listener for the volume control
+document.getElementById('volume-control').addEventListener('input', function() {
+  const gameAudio = document.getElementById('game-audio')
+  gameAudio.volume = this.value
+})
 
 // Function to update the UI based on the current story state
 function updateUI() {
   const storyContainer = document.getElementById('story-container')
   const choicesContainer = document.getElementById('choices-container')
   const playAgainButton = document.getElementById('play-again-button')
+  const endGameImage = document.getElementById('end-game-image')
 
   // Check if we're at the start of the game (no current story state)
   if (!currentStoryState) {
@@ -37,17 +62,15 @@ function updateUI() {
     return
   }
 
-  // Always clear the choices container
   choicesContainer.innerHTML = ''
 
   if (currentStoryState.isEnd) {
-    // We're at an end state, so display the "Play Again" button
     playAgainButton.style.display = 'block'
-    // Display the story text for the end state
     storyContainer.innerHTML = currentStoryState.text
+    endGameImage.style.display = 'block'
   } else {
-    // We're not at an end state, so hide the "Play Again" button and show choices
     playAgainButton.style.display = 'none'
+    endGameImage.style.display = 'none'
     storyContainer.innerHTML = currentStoryState.text
     currentStoryState.choices.forEach(choice => {
       const choiceButton = document.createElement('button')
@@ -123,6 +146,14 @@ function resetGame() {
 
   // Clear the input field
   document.getElementById('name').value = ''
+
+  // Stop the audio and reset it
+  const gameAudio = document.getElementById('game-audio')
+  gameAudio.pause()
+  gameAudio.currentTime = 0
+
+  // Hide the audio controls container
+  document.getElementById('audio-controls').style.display = 'none'
 }
 
 document.addEventListener('DOMContentLoaded', () => {
