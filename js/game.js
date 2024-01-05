@@ -59,7 +59,6 @@ function updateUI() {
 }
 
 
-
 // Function to handle player choices
 function makeChoice(choice) {
   if (choice.nextState) {
@@ -104,7 +103,6 @@ function getStartingState() {
   }
 }
 
-
 // Function to reset the game
 function resetGame() {
   player.party = []
@@ -126,8 +124,6 @@ function resetGame() {
   // Clear the input field
   document.getElementById('name').value = ''
 }
-
-console.log(getStartingState())
 
 document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('start-button').addEventListener('click', startGame)
