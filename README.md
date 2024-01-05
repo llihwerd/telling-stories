@@ -45,6 +45,8 @@ A text-based choose your own adventure game that is played in a browser and has 
 ## Next Steps (icebox)
 
 * Clean up code and find ways to reduce hard-coded solutions through more dynamic methods.
+* Add player name container to show the name that was input at beginning throughout.
 * Integrate story paths with dynamic options that appear/dissapear based on player party/inventory contents. 
 * Add visual party/inventory HUD with images of pokemon/items that persists throughout game.
 * Add more possible endings and a longer overall story.
+* Add fun pokemon themed cursor.
