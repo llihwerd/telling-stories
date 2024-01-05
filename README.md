@@ -1,4 +1,4 @@
-# telling-stories
+# Can you be the very best?
 
 A text-based choose your own adventure game that is played in a browser and has a pokemon theme.
 
@@ -6,9 +6,9 @@ A text-based choose your own adventure game that is played in a browser and has 
 ![Starting Screen](https://file.notion.so/f/f/a6799029-867e-4fd1-9571-a40b90a542a4/814e1cb1-2853-4c1e-8932-6610ad14e9af/README_sc1.png?id=abe41aa2-565a-4eed-b889-08f8f9110093&table=block&spaceId=a6799029-867e-4fd1-9571-a40b90a542a4&expirationTimestamp=1704441600000&signature=-hH7NI5jEQXpAhRKT61-4jHWLD8tglYYqqoTt9pQhco&downloadName=README_sc1.png)
 
 
-Players step into the role of Pokemon Trainer in the world of Pokemon!
+Step into the role of a Pokemon Trainer in the world of Pokemon!
 
-Players decide where the story goes by choosing between possible actions.
+Decide where the story goes by choosing between possible actions.
 
 There are numerous different endings to the game, choose wisely!
 
@@ -18,6 +18,8 @@ There are numerous different endings to the game, choose wisely!
 ## Getting Started
 
 Start playing here, no equipment required! >>> https://gotta-choose-em-all.netlify.app/ 
+
+Planning materials - https://llihwerd.notion.site/SEI-Unit-1-Project-Browser-Game-88c23e74f0484101b3d9b6225877676c
 
 
 ## Attributions
@@ -47,3 +49,4 @@ https://netlify.com/
 
 Integrate story paths with dynamic options that appear/dissapear based on player party/inventory contents. 
 Add visual party/inventory HUD with images of pokemon/items that persists throughout game.
+Add more possible endings and a longer overall story.
