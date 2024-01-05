@@ -3,14 +3,14 @@
 A text-based choose your own adventure game that is played in a browser and has a pokemon theme.
 
 
-![Starting Screen](https://file.notion.so/f/f/a6799029-867e-4fd1-9571-a40b90a542a4/814e1cb1-2853-4c1e-8932-6610ad14e9af/README_sc1.png?id=abe41aa2-565a-4eed-b889-08f8f9110093&table=block&spaceId=a6799029-867e-4fd1-9571-a40b90a542a4&expirationTimestamp=1704441600000&signature=-hH7NI5jEQXpAhRKT61-4jHWLD8tglYYqqoTt9pQhco&downloadName=README_sc1.png)
+![Starting Screen](https://img1.wsimg.com/isteam/ip/1da0c1d6-0276-4dec-be05-23cf138b20ca/Screenshot%202024-01-05%20at%2010.20.16%E2%80%AFAM.png)
 
 
 * Step into the role of a Pokemon Trainer in the world of Pokemon!
 * Decide where the story goes by choosing between possible actions.
 * There are numerous different endings to the game, choose wisely!
 
-![Choice of Starter Pokemon](https://file.notion.so/f/f/a6799029-867e-4fd1-9571-a40b90a542a4/625dc278-ecf3-4d22-a303-37dcc63f6615/README_sc2.png?id=3b723e15-0388-4ec4-b75c-697aeb6402c2&table=block&spaceId=a6799029-867e-4fd1-9571-a40b90a542a4&expirationTimestamp=1704441600000&signature=v0sUHODAuQIyG5eeTi1hOU1vtmHIXl3wp5iShq2IWHk&downloadName=README_sc2.png)
+![Choice of Starter Pokemon](https://img1.wsimg.com/isteam/ip/1da0c1d6-0276-4dec-be05-23cf138b20ca/Screenshot%202024-01-05%20at%2010.20.46%E2%80%AFAM.png)
 
 
 ## Getting Started
@@ -31,8 +31,8 @@ A text-based choose your own adventure game that is played in a browser and has 
 ## Technologies
 
 * MacOS
-* https://code.visualstudio.com/
 * Git
+* https://code.visualstudio.com/
 * https://www.google.com/chrome/
 * https://github.com
 * https://developer.mozilla.org/en-US/
@@ -50,3 +50,5 @@ A text-based choose your own adventure game that is played in a browser and has 
 * Add visual party/inventory HUD with images of pokemon/items that persists throughout game.
 * Add more possible endings and a longer overall story.
 * Add fun pokemon themed cursor.
+* Find better color combinations for text and container background that still meet accessibility standards.
+* Improve format and styling of readme.
