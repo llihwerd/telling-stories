@@ -54,10 +54,6 @@ label {
   flex-wrap: wrap;
 }
 
-/* label, input {
-  display: inline;
-  margin: 10px auto;
-} */
 
 #name, #start-button {
   display: block;
