@@ -15,7 +15,7 @@ A text-based choose your own adventure game that is played in a browser and has 
 
 ## Getting Started
 
-### * [Start playing here, no equipment required!](https://gotta-choose-em-all.netlify.app/)
+### >>> [Start playing here, no equipment required!](https://gotta-choose-em-all.netlify.app/)
 * [Planning materials](https://llihwerd.notion.site/SEI-Unit-1-Project-Browser-Game-88c23e74f0484101b3d9b6225877676c)
 
 ## Attributions
