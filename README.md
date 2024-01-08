@@ -20,11 +20,11 @@ A text-based choose-your-own-adventure game, played in a your web-browser, with 
 
 ## Attributions
 
-* [Free use Pokemon font] (https://www.cdnfonts.com/pokemon-solid.font)
-* [Grass and Pikachu background] (https://shirtigo.co/wp-content/uploads/2013/10/troubleinthetallgrass.jpg)
-* [Ash Ketchum image] (https://www.pinterest.com/pin/182395853637547939/)
-* [Background music] (https://www.youtube.com/watch?v=3etkGxGz-4g)
-* [Favicon] (https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/240px-Pok%C3%A9_Ball_icon.svg.png)
+* [Free use Pokemon font](https://www.cdnfonts.com/pokemon-solid.font)
+* [Grass and Pikachu background](https://shirtigo.co/wp-content/uploads/2013/10/troubleinthetallgrass.jpg)
+* [Ash Ketchum image](https://www.pinterest.com/pin/182395853637547939/)
+* [Background music](https://www.youtube.com/watch?v=3etkGxGz-4g)
+* [Favicon](https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/240px-Pok%C3%A9_Ball_icon.svg.png)
 
 
 ## Technologies
