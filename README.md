@@ -1,6 +1,6 @@
 # Can you be the very best?
 
-A text-based choose your own adventure game that is played in a browser and has a Pokemon theme.
+A text-based choose-your-own-adventure game, played in a your web-browser, with a Pokemon theme.
 
 
 ![Starting Screen](https://img1.wsimg.com/isteam/ip/1da0c1d6-0276-4dec-be05-23cf138b20ca/Screenshot%202024-01-05%20at%2010.20.16%E2%80%AFAM.png)
@@ -8,7 +8,7 @@ A text-based choose your own adventure game that is played in a browser and has 
 
 * Step into the role of a Pokemon Trainer in the world of Pokemon!
 * Decide where the story goes by choosing between possible actions.
-* There are numerous different endings to the game, choose wisely!
+* There are numerous different endings to the game, so choose wisely!
 
 ![Choice of Starter Pokemon](https://img1.wsimg.com/isteam/ip/1da0c1d6-0276-4dec-be05-23cf138b20ca/Screenshot%202024-01-05%20at%2010.20.46%E2%80%AFAM.png)
 
@@ -47,10 +47,10 @@ A text-based choose your own adventure game that is played in a browser and has 
 ## Next Steps (icebox)
 
 * Clean up code and find ways to reduce hard-coded solutions through more dynamic methods.
-* Add player name container to show the name that was input at beginning throughout.
-* Integrate story paths with dynamic options that appear/dissapear based on player party/inventory contents. 
-* Add visual party/inventory HUD with images of pokemon/items that persists throughout game.
+* Add player name container to show input name throughout game.
+* Integrate story paths with dynamic options that appear/disappear based on player party/inventory contents. 
+* Add visual party/inventory HUD with images of Pokemon/items that persist throughout the game.
 * Add more possible endings and a longer overall story.
-* Add fun pokemon themed cursor.
-* Find better color combinations for text and container background that still meet accessibility standards.
+* Add a fun Pokemon-themed cursor.
+* Find better color combinations for text and containers. Ensure colors meet accessibility standards.
 * Improve format and styling of readme.
