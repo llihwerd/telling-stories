@@ -1,6 +1,6 @@
 # Can you be the very best?
 
-A text-based choose your own adventure game that is played in a browser and has a pokemon theme.
+A text-based choose your own adventure game that is played in a browser and has a Pokemon theme.
 
 
 ![Starting Screen](https://img1.wsimg.com/isteam/ip/1da0c1d6-0276-4dec-be05-23cf138b20ca/Screenshot%202024-01-05%20at%2010.20.16%E2%80%AFAM.png)
@@ -15,23 +15,25 @@ A text-based choose your own adventure game that is played in a browser and has 
 
 ## Getting Started
 
-* Start playing here, no equipment required! >>> https://gotta-choose-em-all.netlify.app/ 
-* Planning materials - https://llihwerd.notion.site/SEI-Unit-1-Project-Browser-Game-88c23e74f0484101b3d9b6225877676c
-
+* [Start playing here, no equipment required!](https://gotta-choose-em-all.netlify.app/)
+* [Planning materials](https://llihwerd.notion.site/SEI-Unit-1-Project-Browser-Game-88c23e74f0484101b3d9b6225877676c)
 
 ## Attributions
 
-* Free use Pokemon font - https://www.cdnfonts.com/pokemon-solid.font
-* Grass and Pikachu background - https://shirtigo.co/wp-content/uploads/2013/10/troubleinthetallgrass.jpg
-* Ash Ketchum image - https://www.pinterest.com/pin/182395853637547939/
-* Background music - https://www.youtube.com/watch?v=3etkGxGz-4g
-* Favicon - https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/240px-Pok%C3%A9_Ball_icon.svg.png
+* [Free use Pokemon font] (https://www.cdnfonts.com/pokemon-solid.font)
+* [Grass and Pikachu background] (https://shirtigo.co/wp-content/uploads/2013/10/troubleinthetallgrass.jpg)
+* [Ash Ketchum image] (https://www.pinterest.com/pin/182395853637547939/)
+* [Background music] (https://www.youtube.com/watch?v=3etkGxGz-4g)
+* [Favicon] (https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Pok%C3%A9_Ball_icon.svg/240px-Pok%C3%A9_Ball_icon.svg.png)
 
 
 ## Technologies
 
 * MacOS
 * Git
+* HTML
+* CSS
+* JavaScript
 * https://code.visualstudio.com/
 * https://www.google.com/chrome/
 * https://github.com
