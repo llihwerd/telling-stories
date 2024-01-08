@@ -13,17 +13,17 @@ function startGame() {
   player.name = document.getElementById('name').value
   currentStoryState = getStartingState()
 
-    const playerName = player.name.trim() ? player.name : "you"
-    const h1Element = document.querySelector('h1');
-    h1Element.textContent = `Can ${playerName} be the very best?`
+  const playerName = player.name.trim() ? player.name : "you"
+  const h1Element = document.querySelector('h1');
+  h1Element.textContent = `Can ${playerName} be the very best?`
 
-    // Hide the name input and start button
-    document.getElementById('label').style.display = 'none'
-    document.getElementById('name').style.display = 'none'
-    document.getElementById('start-button').style.display = 'none'
+  // Hide the name input and start button
+  document.getElementById('label').style.display = 'none'
+  document.getElementById('name').style.display = 'none'
+  document.getElementById('start-button').style.display = 'none'
 
-    document.getElementById('story-container').style.display = 'block'
-    document.getElementById('choices-container').style.display = 'block'
+  document.getElementById('story-container').style.display = 'block'
+  document.getElementById('choices-container').style.display = 'block'
 
   updateUI()
 
@@ -91,22 +91,22 @@ function makeChoice(choice) {
   if (choice.nextState) {
     switch (choice.nextState) {
       case "bulbasaurRoute":
-        player.party.push("Bulbasaur")
-        break
+      player.party.push("Bulbasaur")
+      break
       case "charmanderRoute":
-        player.party.push("Charmander")
-        break
+      player.party.push("Charmander")
+      break
       case "squirtleRoute":
-        player.party.push("Squirtle")
-        break
+      player.party.push("Squirtle")
+      break
       case "routeOneCaterpie":
-        player.party.push("Caterpie")
-        break
+      player.party.push("Caterpie")
+      break
       case "routeOneTreasure":
-        player.party.push("SUPER rare candy")
-        break
+      player.party.push("SUPER rare candy")
+      break
       default:
-        break
+      break
     }
     currentStoryState = storyData[choice.nextState]
     updateUI()
@@ -119,14 +119,14 @@ function makeChoice(choice) {
 function getStartingState() {
   // Ensure that storyData is defined and has a valid starting state
   if (typeof storyData !== 'undefined' && storyData.startState) {
-      return storyData.startState
+    return storyData.startState
   } else {
-      console.error("storyData or startState is undefined")
-      // Handle the error or return a default state
-      return {
-          text: "Error: Unable to load the story. Please try again.",
-          choices: []
-      }
+    console.error("storyData or startState is undefined")
+    // Handle the error or return a default state
+    return {
+    text: "Error: Unable to load the story. Please try again.",
+    choices: []
+    }
   }
 }
 
